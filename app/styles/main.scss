@@ -1,4 +1,7 @@
 // bower:scss
+@import "../../bower_components/normalize-scss/_normalize.scss";
+@import "../../bower_components/sassy-maps/sass/_sassy-maps.scss";
+@import "../../bower_components/breakpoint-sass/stylesheets/_breakpoint.scss";
 // endbower
 
 html {
@@ -35,7 +38,7 @@ main {
 aside{
   width: grid-width(4);
   background: grey;
-  float: left;
+  float: right;
 }
 .row > div{
   background: grey;
