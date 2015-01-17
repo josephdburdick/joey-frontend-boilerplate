@@ -2,48 +2,39 @@
 @import "../../bower_components/normalize-scss/_normalize.scss";
 @import "../../bower_components/sassy-maps/sass/_sassy-maps.scss";
 @import "../../bower_components/breakpoint-sass/stylesheets/_breakpoint.scss";
+@import "../../bower_components/compass-mixins/lib/_compass.scss";
+@import "../../bower_components/susy/sass/_susy.scss";
 // endbower
 
-html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
 
-@import "grid";
+// @import "grid";
 
 body {
   background: #fafafa;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #333;
 }
+// Configuring Susy Defaults
+$susy: (
+  global-box-sizing: border-box,
+  use-custom: (rem: true)
+);
+
+@include border-box-sizing;
+// DEMO 
 .container {
-  max-width: 900px;
-  margin: 0 auto;
-  p {
-    padding: 1em;
-  }
+  // @include container;
+}
+.ag1 {
+  @include span(2 of 10);
 }
 
-header {
-  width: grid-width(12);
+.ag2 {
+  @include span(6 of 10);
+  @include clearfix; 
 }
-  
-main {
-  width: grid-width(8, true);
-  background: tomato;
-  float: left;
+.ag3 {
+  @include span(2 of 10 last);
 }
-aside{
-  width: grid-width(4);
-  background: grey;
-  float: right;
-}
-.row > div{
-  background: grey;
-  text-align: center;
-}
-
-
-
