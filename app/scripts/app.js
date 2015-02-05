@@ -1,5 +1,5 @@
 /* jshint devel:true */
-/*global define, requirejs, require */
+/*global requirejs, require */
 requirejs.config({
 	baseUrl: 'scripts/lib',
     paths: {
@@ -11,6 +11,5 @@ requirejs.config({
     shim: {
         'materialize' : ['jquery']
     }
-    
 });
 require(['main']);
