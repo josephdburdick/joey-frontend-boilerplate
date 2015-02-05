@@ -13,7 +13,7 @@ body {
   background-color: #71dad2;
 }
 
-.ag2 {
+.main-content {
   background-color: #fae7b3;
 }
 
@@ -35,7 +35,7 @@ body {
 
 
 .container {
-  @include container;
+  @include container(60rem);
   @include clearfix;
 }
 .leftCol {
@@ -45,7 +45,7 @@ body {
   }
 }
 
-.ag2 {
+.main-content {
   @include span(6 of 10);
   @include clearfix; 
 }
@@ -64,5 +64,11 @@ body {
   @include span(3 of 6);
 }
 .ag5 {
+  @include last;
+}
+.ag8, .ag9, .ag10{
+  @include span(3 of 9);
+}
+.ag10{
   @include last;
 }

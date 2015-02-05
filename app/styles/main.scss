@@ -3,11 +3,6 @@
    ==================================== */
 
 // bower:scss
-@import "../../bower_components/normalize-scss/_normalize.scss";
-@import "../../bower_components/sassy-maps/sass/_sassy-maps.scss";
-@import "../../bower_components/breakpoint-sass/stylesheets/_breakpoint.scss";
-@import "../../bower_components/compass-mixins/lib/_compass.scss";
-@import "../../bower_components/susy/sass/_susy.scss";
 // endbower
 
 /* ====================================
@@ -46,10 +41,4 @@
 @import 'components/navigation';
 @import 'components/footer';
 
-$susy: (
-  global-box-sizing: border-box,
-  use-custom: (rem: true)
-);
-@include border-box-sizing;
-
-@import 'demo';
+// @import 'demo';
