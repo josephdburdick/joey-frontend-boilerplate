@@ -9,6 +9,7 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/materialize/bin/materialize.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -16,87 +17,73 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
-    <!-- build:js scripts/vendor/modernizr.js -->
-    <script src="../bower_components/modernizr/modernizr.js"></script>
-    <!-- endbuild -->
   </head>
   <body>
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-<div class="container">
-  
-  <header>
-    <h1>Grid system test</h1>
-  </header>
 
-
-  <aside class="ag leftCol">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium mollitia suscipit natus quasi eligendi, a, voluptatem illo esse, dolorum cumque asperiores ullam architecto aliquid unde placeat adipisci, quibusdam? Neque, eius.</p>
-  </aside>
-  <!-- /ag1 -->
-
-  <!-- ag4 to ag7 are nested within ag2.-->
-  <main class="ag ag2">
-    <h2>AG 2</h2>
-    <div class="ag ag4">
-      <h2>AG 4</h2>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right side-nav">
+        <li><a href="#1">Link 1</a></li>
+        <li><a href="#2">Link 2</a></li>
+        <li><a href="#3">Link 3</a></li>
+      </ul>
     </div>
-    <div class="ag ag5">
-      <h2>AG 5</h2>
-    </div>
-    <div class="ag ag6">
-      <h2>AG 6</h2>
+  </nav>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col s12">This div is 12-columns wide</div>
+      <div class="col s6">This div is 6-columns wide</div>
+      <div class="col s6">This div is 6-columns wide</div>
     </div>
 
-    <!-- ag8, ag9 and ag10 are nested within ag7 -->
-    <div class="ag ag7">
-      <h2>AG 7</h2>
-      <div class="ag ag8">
-        <h2>AG 8</h2>
-      </div>
-      <div class="ag ag9">
-        <h2>AG 9</h2>
-      </div>
-      <div class="ag ag10">
-        <h2>AG 10</h2>
-      </div>
-    </div>
-    <!-- /ag7 -->
-  </main>
-  <!-- /ag2 -->
-
-  <div class="ag ag3">
-    <h2>AG 3</h2>
   </div>
-  <!-- /ag3 -->
+  <!-- /container -->
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Footer Content</h5>
+          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          <ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2014 Copyright Text
+      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </div>
+  </footer>
+            
 
-</div>
-<!-- /container -->
-<footer>
-  Joey Boilerplate
-</footer>
 
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  <script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-XXXXX-X');ga('send','pageview');
+  </script>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
-
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="../bower_components/jquery/dist/jquery.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
-
-        <!-- build:js scripts/main.js -->
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
+  
+  <script data-main="scripts/app" src="../bower_components/requirejs/require.js"></script>
 </body>
 </html>
