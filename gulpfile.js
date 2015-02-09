@@ -18,7 +18,7 @@ var gulp = require('gulp'),
 gulp.task('styles', function () {
   return gulp.src(paths.scss)
     .pipe($.plumber())
-    .pipe($.sass({errLogToConsole: true}))
+    .pipe($.sass({errLogToConsole: true, sourceMap: true}))
     .pipe($.autoprefixer({browsers: ['last 1 version']}))
     .pipe(gulp.dest(paths.temp + '/styles'));
 });

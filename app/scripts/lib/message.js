@@ -1,6 +1,5 @@
 /* jshint devel:true */
 
-module.exports = function () {
-	console.log('Hello World!');
-	alert(111);
+module.exports = function(name) {
+    return 'Hello ' + name + '!';
 };

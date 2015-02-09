@@ -1,7 +1,10 @@
 /* jshint devel:true */
+/* jshint -W079 */
+/* exported $, Modernizr */
 
-var sayHello = require('./lib/message');
+var sayHello = require('./lib/message'),
+    $ = require('jquery'),
+    Modernizr = require('modernizr');
 
-
-
-sayHello();
+console.log(Modernizr);
+console.log(sayHello('Joe'));
