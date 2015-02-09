@@ -21,6 +21,7 @@ gulp.task('styles', function () {
     .pipe($.sass({errLogToConsole: true, sourceMap: true}))
     .pipe($.autoprefixer({browsers: ['last 1 version']}))
     .pipe(gulp.dest(paths.temp + '/styles'));
+    $.livereload.changed;
 });
 
 gulp.task('jshint', function () {
@@ -37,6 +38,7 @@ gulp.task('js', ['jshint'], function () {
     .pipe(gulp.dest(paths.temp + '/scripts'))
     .pipe($.streamify($.uglify()))
     .pipe(gulp.dest(paths.destination + '/scripts'));
+    $.livereload.changed;
 });
 
 gulp.task('html', ['styles', 'js'], function () {
@@ -121,14 +123,13 @@ gulp.task('watch', ['connect'], function () {
 
   // watch for changes
   gulp.watch([
-    paths.source + '*.html',
+    paths.source + '/*.html',
     paths.temp + '/styles/**/*.css',
     paths.source + '/scripts/**/*.js',
     paths.source + '/images/**/*'
   ]).on('change', $.livereload.changed);
 
   gulp.watch(paths.source + '/styles/**/*.scss', ['styles']);
-  gulp.watch(paths.source + '/scripts/**/*.js', ['js']);
   gulp.watch('bower.json', ['wiredep']);
 });
 
