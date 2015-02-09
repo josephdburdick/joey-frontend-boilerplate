@@ -1,6 +1,6 @@
 /* jshint devel:true */
-/* global define */
 
-define(function(){
-	return 'Hello World';
-});
+module.exports = function () {
+	console.log('Hello World!');
+	alert(111);
+};
