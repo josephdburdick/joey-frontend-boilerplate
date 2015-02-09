@@ -4,7 +4,6 @@
   "dependencies": {
     "jquery": "~2.1.1",
     "modernizr": "~2.8.1",
-    "requirejs": "~2.1.15",
     "materialize": "~0.95.1",
     "lodash": "~3.1.0"
   }
