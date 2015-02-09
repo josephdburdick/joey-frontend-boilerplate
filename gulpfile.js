@@ -130,6 +130,7 @@ gulp.task('watch', ['connect'], function () {
   ]).on('change', $.livereload.changed);
 
   gulp.watch(paths.source + '/styles/**/*.scss', ['styles']);
+  gulp.watch(paths.source + '/scripts/**/*.js', ['js']);
   gulp.watch('bower.json', ['wiredep']);
 });
 
